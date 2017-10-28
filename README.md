@@ -38,5 +38,5 @@ XIII. We emit Frequent Itemsets and their respective counts.<br />
 ### REDUCE 2:
 XIV. In this task, we combine the counts of all the same frequent itemsets.<br />
 XV. We will then get their actual count in entire dataset. Using this, we will then compare their counts with the actual support and eliminate the infrequent ones. This is the elimination of false positives.<br />
-*Note:<br />b 
+* Note:<br />
 After getting the required output from MapReduce Tasks, I just formatted (sorted) the output to wite it to a file.
