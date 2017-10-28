@@ -12,6 +12,23 @@ spark-submit --class "Himanshu_Purandare_SON" --master local[*] Himanshu_Puranda
 The arguments to be passed should be in the given specified order.
 
 ## Description:
+#### Task 1:
+Calculate the combinations of frequent movies (as singletons, pairs, triples, etc...) that were rated by male users and are qualified as frequent given a support threshold value.
+
+In order to apply this computation, we will need to create a basket for each male user containing the ids of the movies that were rated by this male user. If a movie was rated more than one time from a user, we consider that this movie was rated only once. More specifically, the movie ids are unique within each basket. The generated baskets are similar to:
+
+* Male-user1 = (movie 11 , movie 12 , movie 13 , ...)
+* Male-user2 = (movie 21 , movie 22 , movie 23 , ...)
+* Male-user3 = (movie 31 , movie 32 , movie 33 , ...)
+
+#### Task 2:
+Calculate the combinations of frequent female users (as singletons, pairs,triples, etc...) who rated the movies. The frequent combination of female users has to be calculated on the basis of the support threshold value.
+In order to apply this computation, we will need to create a basket for each movie that has been rated by the female users. More specifically, the female users ids are unique within each basket. The generated baskets are similar to:
+
+* Movie 1 = (female-user 1 , female-user 2 , female-user 3 , ...)
+* Movie 2 = (female-user 3 , female-user 4 , female-user 5 , ...)
+* Movie 3 = (female-user 1 , female-user 2 , female-user 5 , ...)
+
 I. The SON algorithm is a 2-Phase MapReduce Algorithm.<br />
 II. In Case 1, as an input to Phase 1 Map, we gave Male_UserIds mapped with the distinct MovieIds that they have rated i.e baskets (UserIds)
 and Items (MovieId). (MaleUserId -> MovieIds)<br />
